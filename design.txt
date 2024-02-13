@@ -20,4 +20,10 @@ Lift state transitions:
 
 Needed functionality:
 - Each lift displays its current state from above
-- 
+- Elevator shows if its going up or down based on floor
+
+
+TODO:
+7 floors.
+2 lift.
+function that moves the lift, by number command.
