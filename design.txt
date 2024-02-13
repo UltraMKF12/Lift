@@ -1,0 +1,23 @@
+7 floors (0-6)
+
+there are two lifts.
+Lift A starts at 0
+Lift B starts at 6
+
+Every floor there is CALL LIFT button.
+The lift closest to that floor goes there.
+When the same distance away, the lift on the lower floor goes.
+When on the same level, the lift A goes.
+
+Inside an elevator, There are 7 buttons to select the destination. (ONLY ONE CAN BE SELECTED)
+Seven segment display -> Current floor (UI)
+Arrow that indicates movement direction (UI)
+
+Lift state transitions:
+1. Elevator is called
+2. Destination reached
+3. Destination selected.
+
+Needed functionality:
+- Each lift displays its current state from above
+- 
