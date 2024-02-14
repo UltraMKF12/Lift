@@ -5,9 +5,9 @@
 }
 
 body {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% auto auto;
 }
 
 /* Floors */
@@ -21,6 +21,7 @@ body {
 
 .floor {
     background-color: rgb(180, 180, 180);
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

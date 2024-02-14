@@ -27,6 +27,8 @@ destination - The floor it needs to go towards.
 Building class functions
 GetClosestLift(floor) - Searches for the closest lift to that floor.
 CallLift(floor). - Calls the closes lift to that floor.
+MoveInsideLift(lift, floor) - moves the specific lift to a specific floor - used inside the lift
+SetDirectionText() - Sets the up/down arrows accoring lift positions on floors
 
 Lift functions
 SetDestination() - Sets the destination and calls movetowards

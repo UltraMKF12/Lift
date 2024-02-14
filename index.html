@@ -13,10 +13,10 @@
         <div class="floor">
             <p>
                 Floor 6
-                <span class="floor-lift-positions">&darr; &darr;</span>
+                <span class="floor-lift-positions">&uarr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&darr;</button>
+                <button onclick="floorCall(6)">&darr;</button>
             </div>
         </div>
 
@@ -26,8 +26,8 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <button onclick="floorCall(5)">&uarr;</button>
+                <button onclick="floorCall(5)">&darr;</button>
             </div>
         </div>
 
@@ -37,8 +37,8 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <button onclick="floorCall(4)">&uarr;</button>
+                <button onclick="floorCall(4)">&darr;</button>
             </div>
         </div>
 
@@ -48,8 +48,8 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <button onclick="floorCall(3)">&uarr;</button>
+                <button onclick="floorCall(3)">&darr;</button>
             </div>
         </div>
 
@@ -59,8 +59,8 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <button onclick="floorCall(2)">&uarr;</button>
+                <button onclick="floorCall(2)">&darr;</button>
             </div>
         </div>
 
@@ -70,8 +70,8 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <button onclick="floorCall(1)">&uarr;</button>
+                <button onclick="floorCall(1)">&darr;</button>
             </div>
         </div>
 
@@ -81,7 +81,7 @@
                 <span class="floor-lift-positions">&darr; &darr;</span>
             </p>
             <div class="floor-buttons">
-                <button>&uarr;</button>
+                <button onclick="floorCall(0)">&uarr;</button>
             </div>
         </div>
     </div>
@@ -90,13 +90,13 @@
         <div id="lift1">
             <p id="lift1-text">0</p>
             <div class="lift-button-container">
-                <button class="lift-button">0</button>
-                <button class="lift-button">1</button>
-                <button class="lift-button">2</button>
-                <button class="lift-button">3</button>
-                <button class="lift-button">4</button>
-                <button class="lift-button">5</button>
-                <button class="lift-button">6</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 0)">0</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 1)">1</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 2)">2</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 3)">3</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 4)">4</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 5)">5</button>
+                <button class="lift-button lb1" onclick="liftCall(1, 6)">6</button>
             </div>
         </div>
     </div>
@@ -105,13 +105,13 @@
         <div id="lift2">
             <p id="lift2-text">6</p>
             <div class="lift-button-container">
-                <button class="lift-button">0</button>
-                <button class="lift-button">1</button>
-                <button class="lift-button">2</button>
-                <button class="lift-button">3</button>
-                <button class="lift-button">4</button>
-                <button class="lift-button">5</button>
-                <button class="lift-button">6</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 0)">0</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 1)">1</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 2)">2</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 3)">3</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 4)">4</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 5)">5</button>
+                <button class="lift-button lb2" onclick="liftCall(2, 6)">6</button>
             </div>
         </div>
     </div>
