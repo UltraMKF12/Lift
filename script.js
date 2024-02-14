@@ -11,38 +11,40 @@ class Lift {
 }
 
 class Building {
-    constructor (floors) {
+    constructor(floors) {
         this.floors = floors;
         this.liftLeft = new Lift(0);
-        this.liftRight = new Lift(floors-1);
+        this.liftRight = new Lift(floors - 1);
     }
-}
 
-function CallLift(lift, towards) {
-    let diff1 = Math.abs(lift[0] - towards);
-    let diff2 = Math.abs(lift[1] - towards);
+    CallLift(towards) {
+        let diff1 = Math.abs(this.liftLeft.position - towards);
+        let diff2 = Math.abs(this.liftRight.position - towards);
 
-    if (diff1 < diff2) {
-        lift[0] = towards;
-    }
-    else if (diff1 > diff2) {
-        lift[1] = towards;
-    }
-    else {
-        if (lift[0] <= lift[1]) {
-            lift[0] = towards;
+        if (diff1 < diff2) {
+            this.liftLeft.position = towards;
+        }
+        else if (diff1 > diff2) {
+            this.liftRight.position = towards;
         }
         else {
-            lift[1] = towards;
+            if (this.liftLeft.position <= this.liftRight.position) {
+                this.liftLeft.position = towards;
+            }
+            else {
+                this.liftRight.position = towards;
+            }
         }
+    }
+
+    PrintPosition() {
+        console.log(`${this.liftLeft.position} - ${this.liftRight.position}`);
     }
 }
 
-let lift = [0, 6];
 
-CallLift(lift, 4);
-CallLift(lift, 3);
-CallLift(lift, 2);
-CallLift(lift, 1);
-CallLift(lift, 1);
-console.log(lift);
+const building = new Building(7);
+building.CallLift(4);
+building.CallLift(2);
+building.CallLift(3);
+building.PrintPosition();

@@ -1,29 +1,40 @@
-7 floors (0-6)
+UI
+3 columns.
+both have 7 rows.
 
-there are two lifts.
-Lift A starts at 0
-Lift B starts at 6
-
-Every floor there is CALL LIFT button.
-The lift closest to that floor goes there.
-When the same distance away, the lift on the lower floor goes.
-When on the same level, the lift A goes.
-
-Inside an elevator, There are 7 buttons to select the destination. (ONLY ONE CAN BE SELECTED)
-Seven segment display -> Current floor (UI)
-Arrow that indicates movement direction (UI)
-
-Lift state transitions:
-1. Elevator is called
-2. Destination reached
-3. Destination selected.
-
-Needed functionality:
-- Each lift displays its current state from above
-- Elevator shows if its going up or down based on floor
+First column:
+FloorX text -- Span that shows the first and second lift, is higher or lower.
+Button up, button down.
+Up down button in an elevator works only on already moving lifts. If no lifts are moving then default behavior.
+It only stops lifts already going towards that direction.
 
 
-TODO:
-7 floors.
-2 lift.
-function that moves the lift, by number command.
+Second and Third column:
+LIFT inside the row that the position is in.
+Inside the lift, there are 7 buttons - 123/456/7 in that order in 3 rows.
+
+EXTRA: Seven segment display for the lift.
+
+
+CODE
+Building class:
+Lift left, lift right
+
+Lift class:
+position, state[moving or stopped]
+destination - The floor it needs to go towards.
+
+Building class functions
+GetClosestLift(floor) - Searches for the closest lift to that floor.
+CallLift(floor). - Calls the closes lift to that floor.
+
+Lift functions
+SetDestination() - Sets the destination and calls movetowards
+MoveTowards() - Calculates if it needs to go up or down.
+
+    Recursive function
+    It waits for .5 seconds then calls this function again until it reaches
+    the destination.
+
+    If the destination is reached, the state is set to stopped.
+    When the function is called the state is set to moving.
