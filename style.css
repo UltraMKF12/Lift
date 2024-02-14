@@ -69,18 +69,18 @@ body {
     grid-row: 1;
 }
 
-.lift-buttons {
+.lift-button-container {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-items: center;
     gap: 0.3rem;
 }
 
-.lift-buttons button:last-child {
+.lift-button:last-child {
     grid-column: 2;
 }
 
-.lift-buttons button {
+.lift-button {
     border: none;
     font-size: 1.5rem;
     width: 2rem;
