@@ -71,7 +71,7 @@ class Lift {
         else this.direction = "down";
         building.updateFloorDirections();  // If the destination changes while moving
 
-        // This simulates the lift moving using recursion
+        // This simulates the lift moving by calling this function again after 0.5 seconds
         setTimeout(() => {
             // Recalculate sign to avoid a bug where the lift overshoots
             // When selecting a new floor while it's moving
@@ -107,6 +107,8 @@ class Building {
         this.liftRight = new Lift(floors - 1, liftRight);
     }
 
+    // If needed, we can change this function to give back
+    // The other lift if the closest one is MOVING
     getClosestLift(floor) {
         let diff1 = Math.abs(this.liftLeft.position - floor);
         let diff2 = Math.abs(this.liftRight.position - floor);
@@ -133,8 +135,10 @@ class Building {
     }
 
     moveLift(lift, floor) {
-        lift.setDestination(floor);
+        // If we set the destination outside the if statement,
+        // The lift could change destination while moving towards a floor.
         if (lift.state == LiftState.Stopped) {
+            lift.setDestination(floor);
             lift.moveTowardsDestination();
         }
     }

@@ -88,3 +88,11 @@ body {
     height: 2rem;
     border-radius: 0.5rem;
 }
+
+button:hover {
+    filter: brightness(80%);
+}
+
+button:active {
+    filter: brightness(60%);
+}
